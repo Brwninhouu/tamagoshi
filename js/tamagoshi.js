@@ -4,39 +4,47 @@ var saude = 50;
 var fome = 50;
 var tempo = 0;//ARRUMAR UM JEITO DE CHAMAR A FUNÇÃO DANO QUANDO O TEMPO MUDAR
 
-setInterval(display, 20000);//1000 = 1seg
-display()
+setInterval(display, 2000);//1000 = 1seg
+display();
 
 function display() {
     tempo++
-    document.getElementById("tempo").innerHTML="Tempo: " + tempo
-    document.getElementById("saude").innerHTML="Saude: " + saude
-    document.getElementById("fome").innerHTML="Fome: " + fome
-    document.getElementById("humor").innerHTML="Humor: " + humor()
+    if (tempo >= 2) dano()
+    document.getElementById("tempo").innerHTML = "Tempo: " + tempo
+    document.getElementById("saude").innerHTML = "Saude: " + saude
+    document.getElementById("fome").innerHTML = "Fome: " + fome
+    document.getElementById("humor").innerHTML = "Humor: " + humor()
     imagem();
 }
 // criar uma outra função para clicar e aumentar a fome e a saude, as funções que estão aqui, devem diminuir 
-function dano(){
-if (saude > 0)
-saude = saude -1
-if (fome > 0)
-fome = fome -1
+function dano() {
+    if (saude > 0)
+        saude = saude - 2
+    if (fome > 0)
+        fome = fome - 2
 }
 
 function humor() {
-   return (fome + saude) / 2;
+    return (fome + saude) / 2;
 }
 
 function comer(valor) {
-    if (fome < 100)
-   fome = fome + valor
+
+    if (fome < 100) {
+        fome = fome + valor
+    }
+    document.getElementById("fome").innerHTML = "Fome: " + fome
+    document.getElementById("saude").innerHTML = "Saude: " + saude
 }
 
 function remedio(valor) {
-    if (saude < 100)
-    saude = saude + valor
+    if (saude < 100){
+        saude = saude + valor
+    }
+    document.getElementById("fome").innerHTML = "Fome: " + fome
+    document.getElementById("saude").innerHTML = "Saude: " + saude
 }
-
+    
 function imagem() {
     img = "t01.gif";
     if (saude == 0 || fome == 0)
