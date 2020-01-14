@@ -1,8 +1,8 @@
 // codigo retirado de mim mesmo pq sou inteligente.
-var nome = "";
+var nome = "Brwninhouu";
 var saude = 50;
 var fome = 50;
-var tempo = 0;
+var tempo = 0;//ARRUMAR UM JEITO DE CHAMAR A FUNÇÃO DANO QUANDO O TEMPO MUDAR
 
 setInterval(display, 20000);//1000 = 1seg
 display()
@@ -18,9 +18,9 @@ function display() {
 // criar uma outra função para clicar e aumentar a fome e a saude, as funções que estão aqui, devem diminuir 
 function dano(){
 if (saude > 0)
-saude--
+saude = saude -1
 if (fome > 0)
-fome--
+fome = fome -1
 }
 
 function humor() {
