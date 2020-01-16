@@ -4,7 +4,7 @@ var saude = 50;
 var fome = 50;
 var tempo = 0;
 
-setInterval(display, 25000); //1000 = 1seg
+setInterval(display, 24999); //1000 = 1seg
 display();
 
 function display() {
