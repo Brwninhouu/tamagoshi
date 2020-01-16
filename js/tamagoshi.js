@@ -4,7 +4,7 @@ var saude = 50;
 var fome = 50;
 var tempo = 0;
 
-setInterval(display, 25000); //1000 = 1seg
+setInterval(display, 50000); //1000 = 1seg
 display();
 
 function display() {
@@ -19,7 +19,7 @@ function display() {
 }
 
 function morreu() {
-    document.write("<center><h1>VOCÊ PERDEU, TROUXA, VOCÊ É O PIOR PAI QUE EU JÁ VI NA MINHA VIDA</h1><br><img src='img/lucasromario.jpg'><br><br><img src='img/t07.gif' width=500 height=300></center>")
+    document.write("<center><h1>VOCÊ PERDEU, SEU RETARDADO LIXO,TROUXA, VOCÊ É O PIOR PAI QUE EU JÁ VI NA MINHA VIDA</h1><br><img src='img/lucasromario.jpg'><br><br><img src='img/t07.gif' width=500 height=300></center>")
 }
 
 function dano() {
