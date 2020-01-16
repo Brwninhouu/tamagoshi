@@ -19,8 +19,9 @@ function display() {
 }
 
 function morreu() {
-    document.write("<center><h1>VOCÊ PERDEU, TROUXA, VOCÊ É O PIOR PAI QUE EU JÁ VI NA MINHA VIDA</h1><br><img src='img/lucasromario.jpg'><br><br><img src='img/t07.gif' width=500 height=300></center>")
+    window.location.replace('gameover.html');
 }
+
 
 function dano() {
     if (saude > 0)
